@@ -3,8 +3,8 @@ package ru.praktikumservices.qascooter.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.ArrayList;
 import java.util.List;
-
 public class OrderPageScooter {
 
     private final WebDriver driver;

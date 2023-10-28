@@ -9,10 +9,8 @@ public class HomePageScooter {
     private final HeaderPageScooter headerPageScooter;
     private static final String URL = "https://qa-scooter.praktikum-services.ru/";
 
-
     //Кнопка "Принять cookie"
     private final By cookieButton = By.id("rcc-confirm-button");
-
 
     public HomePageScooter(WebDriver driver) {
         this.driver = driver;
@@ -22,6 +20,9 @@ public class HomePageScooter {
     public HomePageScooter open() {
         driver.get(URL);
         return this;
+    }
+    public static String getUrl() {
+        return URL;
     }
 
     public WebElement getAccordionHeading(int id) {
