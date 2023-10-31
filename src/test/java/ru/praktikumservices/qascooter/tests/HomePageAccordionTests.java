@@ -5,14 +5,9 @@ import static org.hamcrest.CoreMatchers.is;
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.praktikumservices.qascooter.pages.HomePageScooter;
 import ru.praktikumservices.qascooter.rules.BrowserRule;
-
-import java.util.List;
 
 @RunWith(Parameterized.class)
 public class HomePageAccordionTests {

@@ -5,13 +5,13 @@ import org.junit.Test;
 import ru.praktikumservices.qascooter.pages.HeaderPageScooter;
 import ru.praktikumservices.qascooter.pages.HomePageScooter;
 import ru.praktikumservices.qascooter.rules.BrowserRule;
-import ru.praktikumservices.qascooter.utils.Utils;
+import ru.praktikumservices.qascooter.utils.FakeUserData;
 
 import static org.junit.Assert.assertTrue;
 
-public class OrderStatus {
+public class OrderStatusTest {
 
-    private static final String NOT_EXISTING_ORDER = Utils.randomString();
+    private static final String NOT_EXISTING_ORDER = FakeUserData.randomNumber();
 
     @Rule
     public BrowserRule browserRule = new BrowserRule();

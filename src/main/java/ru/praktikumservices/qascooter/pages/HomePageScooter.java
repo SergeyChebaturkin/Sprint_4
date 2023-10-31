@@ -1,6 +1,7 @@
 package ru.praktikumservices.qascooter.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -11,6 +12,9 @@ public class HomePageScooter {
 
     //Кнопка "Принять cookie"
     private final By cookieButton = By.id("rcc-confirm-button");
+
+    //Нижняя кнопка "Заказать"
+    private final By middleOrderButton = By.xpath(".//button[contains(@class,'Button_Middle__1CSJM')]");
 
     public HomePageScooter(WebDriver driver) {
         this.driver = driver;
@@ -41,6 +45,13 @@ public class HomePageScooter {
 
     public HomePageScooter clickOnOrderButtonInHeader() {
         driver.findElement(headerPageScooter.getOrderButton()).click();
+        return this;
+    }
+
+    public HomePageScooter clickOnMiddleOrderButton() {
+        WebElement element = driver.findElement(middleOrderButton);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        element.click();
         return this;
     }
 
