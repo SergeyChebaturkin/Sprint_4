@@ -5,6 +5,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import ru.praktikumservices.qascooter.pages.HomePageScooter;
+import ru.praktikumservices.qascooter.pages.OrderPageScooter;
 import ru.praktikumservices.qascooter.rules.BrowserRule;
 
 public class OrderButtonTest {
@@ -18,6 +19,6 @@ public class OrderButtonTest {
         homePageScooter
                 .open()
                 .clickOnMiddleOrderButton();
-        assertEquals("https://qa-scooter.praktikum-services.ru/order", driver.getCurrentUrl());
+        assertEquals(OrderPageScooter.getUrl(), driver.getCurrentUrl());
     }
 }

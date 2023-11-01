@@ -7,6 +7,8 @@ public class OrderPageScooter {
 
     private final WebDriver driver;
 
+    private static final String URL = "https://qa-scooter.praktikum-services.ru/order";
+
     //Поле ввода имени
     private final By inputName = By.xpath(".//input[@placeholder='* Имя']");
 
@@ -69,6 +71,10 @@ public class OrderPageScooter {
 
     public OrderPageScooter(WebDriver driver) {
         this.driver = driver;
+    }
+
+    public static String getUrl() {
+        return URL;
     }
 
     public OrderPageScooter inputName(String name) {
