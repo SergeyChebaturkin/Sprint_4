@@ -7,6 +7,8 @@ import java.util.Locale;
 
 public class FakeUserData {
 
+    private FakeUserData() {}
+
     private static final Faker faker = new Faker(new Locale("ru", "RU"));
     private static final FakeValuesService fakeValuesService = new FakeValuesService(
             new Locale("ru", "RU"), new RandomService());
